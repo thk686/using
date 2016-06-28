@@ -11,10 +11,10 @@ formals(use)
 #> $directive
 stop_using(use)
 list_using()
-#> [1] "use"
+#> character(0)
 using(my_use = using::use)
 list_using()
-#> [1] "my_use" "use"
+#> [1] "my_use"
 formals(my_use)
 #> $directive
 stop_using(my_use)

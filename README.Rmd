@@ -13,3 +13,16 @@ knitr::opts_chunk$set(
 ```
 
 This package simplifies managing your search path in the context of R's namespaces.
+
+```{r}
+using::using(using)
+using(using::use)
+list_using()
+formals(use)
+stop_using(use)
+list_using()
+using(my_use = using::use)
+list_using()
+formals(my_use)
+stop_using(my_use)
+```

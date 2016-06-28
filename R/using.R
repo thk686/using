@@ -111,12 +111,16 @@ unuse = function(directive)
          },
          is1 =
          {
-           unload_package(vals)
-           return(directive)
+           newname = vals;
+           nsname = vals;
+           oldname = vals;
          },
          default = stop("Invalid input")
   )
-  remove(list = newname, envir = get_env())
+  if (newname %in% list_using())
+    remove(list = newname, envir = get_env())
+  else
+    unload_package(nsname)
   return(directive)
 }
 
